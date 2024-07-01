@@ -23,12 +23,12 @@ To run this project locally, follow these steps:
 - Run the development server: npm run dev
 - Open your browser and navigate to http://localhost:3000
 - 
-Deployment
+### Deployment
 This project is deployed using Vercel and can be accessed here.[https://nextjs-weather-app-eta-ten.vercel.app/]
 
-License
+### License
 This project is licensed under the MIT License - see the LICENSE file for details.
 
-Acknowledgments
-Thanks to OpenWeather for providing the weather API.
-Inspired by the need for a simple and responsive weather forecast application.
+### Acknowledgments
+- Thanks to OpenWeather for providing the weather API.
+- Inspired by the need for a simple and responsive weather forecast application.
