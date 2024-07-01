@@ -89,7 +89,7 @@ export default function Home() {
       ></div>
 
       <div className="relative z-10">
-        <div className="flex flex-grow align-top justify-between">
+        <div className="flex flex-grow align-top justify-between max-md:flex-col-reverse">
           {/* left top div */}
           <div
             className="mx-10 mt-5 p-5"
@@ -97,7 +97,7 @@ export default function Home() {
           >
             {weatherData && !error ? (
               <>
-                <div className="flex flex-row items-top">
+                <div className="flex flex-row items-top flex-wrap gap-4 max-md:items-center justify-center">
                   <h1 className="text-white text-6xl">
                     {weatherData?.main?.temp}°
                   </h1>
@@ -119,7 +119,7 @@ export default function Home() {
                       F
                     </button>
                   </div>
-                  <div className="ml-8">
+                  <div className="ml-8 max-md:ml-0">
                     <img
                       src={`https://openweathermap.org/img/wn/${weatherData?.weather?.[0].icon}@2x.png`}
                       alt="weather-icon"
@@ -130,7 +130,7 @@ export default function Home() {
                     </p>
                   </div>
                 </div>
-                <h1 className="text-4xl text-white opacity-75 ">
+                <h1 className="text-4xl text-white opacity-75 max-md:text-center">
                   {city.charAt(0).toUpperCase() + city.slice(1)}
                 </h1>
               </>
@@ -163,17 +163,17 @@ export default function Home() {
             className="mx-10 mt-5 p-8 text-white text-right h-[113px]"
             style={{ backgroundColor: "rgba(0,0,0,0.3)" }}
           >
-            <h2 className="opacity-75">{time}</h2>
-            <p className="opacity-35">{date}</p>
+            <h2 className="opacity-75 max-md:text-center">{time}</h2>
+            <p className="opacity-35 max-md:text-center">{date}</p>
           </div>
         </div>
 
         {/* LOWER CONTENT */}
         <div className="mt-[15%] w-full">
-          <div className="text-white flex flex-row items-center ml-10">
+          <div className="text-white flex flex-row items-center ml-10 max-md:items-center max-md:ml-0 max-md:justify-center">
             <p
               onClick={() => setIsDaily(false)}
-              className={`text-lg cursor-pointer ml-2 ${
+              className={`text-lg cursor-pointer ml-2 max-md:ml-0 ${
                 isDaily ? "opacity-30" : "opacity-65 border-b-2 border-white"
               }`}
             >
@@ -189,7 +189,7 @@ export default function Home() {
             </p>
           </div>
           <div
-            className="flex flex-row justify-between p-10"
+            className="flex flex-row justify-between p-10 flex-wrap gap-5"
             style={{ backgroundColor: "rgba(0,0,0,0.3)" }}
           >
             {isDaily 
