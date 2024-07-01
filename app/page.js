@@ -81,7 +81,7 @@ export default function Home() {
     debouncedSetCity(e.target.value ? e.target.value : initialCity);
 
   return (
-    <main className="relative h-screen w-screen bg-black">
+    <main className="relative min-h-screen w-screen bg-black">
       {/* Background image */}
       <div
         className="absolute inset-0 bg-cover bg-center opacity-40"
@@ -169,7 +169,7 @@ export default function Home() {
         </div>
 
         {/* LOWER CONTENT */}
-        <div className="fixed bottom-0 left-0 w-full">
+        <div className="mt-[15%] w-full">
           <div className="text-white flex flex-row items-center ml-10">
             <p
               onClick={() => setIsDaily(false)}

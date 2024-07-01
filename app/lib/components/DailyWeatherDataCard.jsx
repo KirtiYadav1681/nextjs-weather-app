@@ -3,7 +3,7 @@ import React from "react";
 const DailyWeatherDataCard = ({ data, error }) => {
   return (
     <div
-      className={`text-white opacity-80 p-3 w-[12%] h-[185px] rounded-lg ${error && "hidden"}`}
+      className={`text-white opacity-80 p-3 w-[12%] min-h-[185px] rounded-lg ${error && "hidden"}`}
       style={{ backgroundColor: "rgba(225,225,225,0.2)" }}
     >
       <p>
