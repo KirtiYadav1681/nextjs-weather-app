@@ -12,7 +12,7 @@ export const fetchHourlyWeatherData = async (lat, lon, unit) => {
   return data;
 };
 
-export const fetchCurrentWeatherData = async (city, unit) => {
+export const fetchCurrentWeatherData = async (city , unit) => {
   const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${unit}`;
 
   const response = await fetch(url);

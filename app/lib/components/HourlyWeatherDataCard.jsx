@@ -3,7 +3,7 @@ import React from "react";
 const HourlyWeatherDataCard = ({data, error}) => {
   return (
     <div
-    className={`text-white opacity-80 p-3 lg:w-[12%] md:w-[25%] sm:w-[100%] min-h-[185px] max-sm:w-[100%] rounded-lg ${error && "hidden"} flex flex-col max-md:items-center max-md:justify-center`}
+    className={`text-white opacity-80 p-3 lg:w-[12%] md:w-[25%] sm:w-[100%] min-h-[190px] max-sm:w-[100%] rounded-lg ${error && "hidden"} flex flex-col max-md:items-center max-md:justify-center`}
     style={{ backgroundColor: "rgba(225,225,225,0.2)" }}
   > 
       <p>

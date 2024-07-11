@@ -5,7 +5,10 @@ import weatherBackgrounds from "./lib/constants/bg";
 import debounce from "lodash/debounce";
 import { FaLocationDot } from "react-icons/fa6";
 import { getCurrentTime, getCurrentDate } from "./lib/utils/getDateAndTime";
-import { fetchCurrentWeatherData, fetchHourlyWeatherData, } from "./lib/utils/fetchData";
+import {
+  fetchCurrentWeatherData,
+  fetchHourlyWeatherData,
+} from "./lib/utils/fetchData";
 import { fetchCoordinates } from "./lib/utils/fetchCoordinates";
 import HourlyWeatherDataCard from "./lib/components/HourlyWeatherDataCard";
 import DailyWeatherDataCard from "./lib/components/DailyWeatherDataCard";
@@ -192,16 +195,24 @@ export default function Home() {
             className="flex flex-row justify-between p-10 flex-wrap gap-5"
             style={{ backgroundColor: "rgba(0,0,0,0.3)" }}
           >
-            {isDaily 
+            {isDaily
               ? forecastWeatherData?.daily
                   ?.slice(1)
                   ?.map((data, index) => (
-                    <DailyWeatherDataCard data={data} key={index} error={error} />
+                    <DailyWeatherDataCard
+                      data={data}
+                      key={index}
+                      error={error}
+                    />
                   ))
               : forecastWeatherData?.hourly
                   ?.slice(0, 7)
                   ?.map((data, index) => (
-                    <HourlyWeatherDataCard data={data} key={index} error={error} />
+                    <HourlyWeatherDataCard
+                      data={data}
+                      key={index}
+                      error={error}
+                    />
                   ))}
             {error && (
               <h2 className="text-red-600 text-base">
